@@ -35,6 +35,7 @@ const Prevention = () => {
 const Stats = ({ stats, all }) => {
 
     const [data, setData] = useState(stats.Totals)
+    const [show, Display] = useState(true)
 
     const Change = name => {
         switch (name) {
@@ -56,15 +57,12 @@ const Stats = ({ stats, all }) => {
     return (
         global ? (
             <View style={styles.body}>
-                <Text style={titles.h5}>Statistics</Text>
-                <SwitchTab Func={Change}/>
-                <Labels Func={Change}/>
+                <Text style={titles.h1}>Statistics</Text>
+                <SwitchTab Func={Change} Display={Display}/>
+                {show?<Labels Func={Change}/>:null}
                 <Frame>
                     <StatSet data={data} />
                 </Frame>
-                {/*
-                Boxes
-                 */}
             </View>
         ) : null
     )

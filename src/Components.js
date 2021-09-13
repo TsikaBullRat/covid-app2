@@ -144,7 +144,7 @@ const StatSet = ({ data }) => {
                         <Text style={titles.statData}>{data.Deaths}</Text>
                     </View>
                 </View>
-                <View style={styles.orangeLong}>
+                <View style={styles.greenLong}>
                     <Text style={titles.statName}>{Object.keys(data)[2]}</Text>
                     <Text style={titles.statData}>{data.Recovery}</Text>
                 </View>
@@ -170,7 +170,7 @@ const StatTab = ({ data }) => {
     )
 }
 
-const SwitchTab = () => {
+const SwitchTab = ({Func, Display}) => {
 
     const [style, setStyle] = useState({
         left: styles.on,
@@ -187,6 +187,8 @@ const SwitchTab = () => {
                 t1: titles.off,
                 t2: titles.on
             })
+            Display(false)
+            Func("Global")
         } else if (style.left === styles.off) {
             setStyle({
                 left: styles.on,
@@ -194,6 +196,8 @@ const SwitchTab = () => {
                 t1: titles.on,
                 t2: titles.off
             })
+            Display(true)
+            Func("Total")
         }
     }
 

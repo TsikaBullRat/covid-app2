@@ -6,8 +6,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#CD113B'
     },
     green:{
-        width: 130,
-        height: 130,
+        width: 150,
+        height: 150,
+        backgroundColor: '#57CC99',
+        borderRadius: 25,
+        margin: 15
+    },
+    greenLong:{
+        width: '90%',
+        height: 150,
         backgroundColor: '#57CC99',
         borderRadius: 25,
         margin: 25
@@ -71,25 +78,25 @@ const styles = StyleSheet.create({
         transition: '0.4s'
     },
     orange:{
-        width: 130,
-        height: 130,
+        width: 150,
+        height: 150,
         backgroundColor: '#FF7600',
         borderRadius: 25,
-        margin: 25
+        margin: 15
     },
     orangeLong:{
         width: '90%',
-        height: 130,
+        height: 150,
         backgroundColor: '#FF7600',
         borderRadius: 25,
         margin: 25
     },
     red:{
-        width: 130,
-        height: 130,
+        width: 150,
+        height: 150,
         backgroundColor: '#CD113B',
         borderRadius: 25,
-        margin: 25
+        margin: 15
     },
     row:{
         flexDirection: 'row',
@@ -192,11 +199,11 @@ const styles = StyleSheet.create({
         marginBottom: 20
     },
     yellow:{
-        width: 130,
-        height: 130,
+        width: 150,
+        height: 150,
         backgroundColor: '#FFA900',
         borderRadius: 25,
-        margin: 25
+        margin: 15
     }
 })
 
